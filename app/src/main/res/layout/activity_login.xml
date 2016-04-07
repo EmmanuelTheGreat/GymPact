@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:fadeScrollbars="true"
+    android:fadingEdge="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_login">
+
+        <!--  Header Starts-->
+        <LinearLayout android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/header_gradient_login"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <!-- Logo Start-->
+            <ImageView android:src="@drawable/gymthusiast_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:id="@+id/imageView2" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:weightSum="1"
+            android:layout_below="@+id/header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+<!--><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,42 +54,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.emmanuel.gympact.LoginActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/etUsername"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Username" />
+<!-->
+            <TextView android:layout_width="wrap_content"
+                android:text="Username"
+                android:layout_height="wrap_content"/>
 
-    <EditText
-        android:layout_width="wrap_content"
+            <EditText
+
+                android:hapticFeedbackEnabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etUsername"
+
+                android:hint="Username"
+
+                android:layout_marginBottom="30dp"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint"
+                android:background="@color/white"/>
+
+
+            <TextView android:layout_width="wrap_content"
+                android:text="Password"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hapticFeedbackEnabled="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/etPassword"
-        android:layout_below="@+id/etUsername"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:layout_alignRight="@+id/etUsername"
-        android:layout_alignEnd="@+id/etUsername"
-        android:hint="Password" />
+        android:hint="Password"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/input_login"
+        />
 
     <Button
-        android:layout_width="wrap_content"
+        android:hapticFeedbackEnabled="true"
+        android:layout_width= "match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/bLogin"
-        android:layout_below="@+id/etPassword"
-        android:layout_marginTop="41dp"
-        android:layout_alignRight="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
+
+        android:layout_marginTop="20dip"
+        android:background="#1a3677"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,6 +113,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Register Here"
         android:id="@+id/tvRegisterHere"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffff" />
+
+</LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
