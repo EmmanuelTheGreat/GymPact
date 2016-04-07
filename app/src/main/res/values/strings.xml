@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Gymthusiast</string>
+    <string name="title_activity_main">Gymthusiast</string>
+    <string name="title_activity_AboutMe">About Me</string>
+    <string name="title_activity_BMI">My BMI</string>
+    <string name="title_activity_Workouts">My Workouts</string>
+    <string name="title_activity_Progress">My Progress</string>
+    <string name="title_activity_Tips">Useful Tips</string>
+    <string name="title_activity_Settings">Settings</string>
+    <string name="title_activity_LogOut">Log Out</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/userArea"
+            android:icon="@drawable/ic_person_black_48dp"
+            android:title="User Area" />
+        <item
+            android:id="@+id/bmi_calc"
+            android:icon="@drawable/ic_person_black_48dp"
+            android:title="My BMI" />
+        <item
+            android:id="@+id/myworkouts"
+            android:icon="@drawable/ic_fitness_center_black_48dp"
+            android:title="My Workouts" />
+        <item
+            android:id="@+id/myprogress"
+            android:icon="@drawable/ic_trending_up_black_48dp"
+            android:title="My Progress" />
+        <item
+            android:id="@+id/tips"
+            android:icon="@drawable/ic_info_outline_black_48dp"
+            android:title="Tips" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings_black_48dp"
+                android:title="Settings" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_vpn_key_black_48dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
