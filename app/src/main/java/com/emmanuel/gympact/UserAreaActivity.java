@@ -40,9 +40,16 @@ public class UserAreaActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+             //   int age = UserAreaActivity.etage("age");
 
                 Intent menuIntent = new Intent(UserAreaActivity.this, MainActivity.class);
                 startActivity(menuIntent);
+
+              //  Intent intentBmi = new Intent(UserAreaActivity.this, Bmi_calc.class);
+
+               // intentBmi.putExtra("age", age);
+
+             //   UserAreaActivity.this.startActivity(intentBmi);
 
             }
         });

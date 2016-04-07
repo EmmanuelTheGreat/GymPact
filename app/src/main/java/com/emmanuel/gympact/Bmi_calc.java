@@ -1,6 +1,7 @@
 package com.emmanuel.gympact;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -36,11 +37,18 @@ public class Bmi_calc extends Fragment {
 
 
         final Button BMICalc = (Button)myView.findViewById(R.id.calculatebmi);
+        final EditText bmiAge = (EditText)myView.findViewById(R.id.bmiAge);
         final EditText field_weight = (EditText)myView.findViewById(R.id.field_weight);
         final EditText field_height = (EditText)myView.findViewById(R.id.field_height);
         final TextView view_result = (TextView)myView.findViewById(R.id.view_result);
         final TextView view_msg = (TextView)
                 myView.findViewById(R.id.view_msg);
+
+     //   Intent intent = getActivity().getIntent();
+
+     //  int age = intent.getIntExtra("age", -1);
+
+    //    bmiAge.setText(age + "");
 
         BMICalc.setOnClickListener(new View.OnClickListener(){
             @Override

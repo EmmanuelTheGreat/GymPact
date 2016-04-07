@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/bmiAge"
         android:layout_above="@+id/textView4"
         android:layout_alignLeft="@+id/field_height"
         android:layout_alignStart="@+id/field_height" />

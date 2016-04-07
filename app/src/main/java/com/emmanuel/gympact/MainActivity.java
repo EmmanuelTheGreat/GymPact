@@ -114,7 +114,10 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
         } else if (id == R.id.myprogress) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
-        } else if (id == R.id.tips) {
+        } else if (id == R.id.online) {
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new Online()).commit();
+
+        }else if (id == R.id.tips) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new TipsFragment()).commit();
         } else if (id == R.id.settings) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
