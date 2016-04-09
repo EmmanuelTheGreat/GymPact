@@ -1,6 +1,10 @@
 package com.emmanuel.gympact;
 
 import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,6 +13,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 /**
  * Created by user on 07/04/2016.
@@ -28,10 +33,52 @@ public class Online extends Fragment {
         // webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://www.google.co.uk/webhp?hl=en");
         webSettings.setBuiltInZoomControls(true);
-        webView.setInitialScale(100);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setInitialScale(180);
+        webView.setWebViewClient(new myWebClient());
 
         return myView;
 
     }
+
+    private class myWebClient extends WebViewClient{
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            if(Uri.parse(url).getHost().equals("www.google.co.uk")){
+                //open webpage in webview
+                return false;
+            }
+            else{
+                //otherwise open website in external browser/app
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+                return true;
+            }
+        }
+
+        //progress dialog
+
+        ProgressDialog pd = null;
+
+        @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+            pd = new ProgressDialog(Online.this.getActivity());
+            pd.setTitle("Just a moment");
+            pd.setMessage("You're almost there... :)");
+            pd.show();
+            super.onPageStarted(view, url, favicon);
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            pd.dismiss();
+            super.onPageFinished(view, url);
+        }
+    }
+
+
+
+
+
 }

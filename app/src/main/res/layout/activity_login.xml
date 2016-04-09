@@ -106,7 +106,7 @@
 
 
         android:layout_marginTop="20dip"
-        android:background="#1a3677"
+        android:background="@drawable/loginbutton"
         android:textColor="#ffffff"/>
 
     <TextView

@@ -109,14 +109,12 @@ public class MainActivity extends AppCompatActivity
 
         if(id == R.id.bmi_calc) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Bmi_calc()).commit();
-
-        } else if (id == R.id.my_workouts) {
+        } else if (id == R.id.myworkouts) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
         } else if (id == R.id.myprogress) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new MyProgressFragment()).commit();
         } else if (id == R.id.online) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Online()).commit();
-
         }else if (id == R.id.tips) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new TipsFragment()).commit();
         } else if (id == R.id.settings) {
