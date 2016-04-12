@@ -15,27 +15,54 @@ import android.widget.Button;
  */
 public class MyWorkoutsFragment extends PreferenceFragment{
 
-        View myView;
+        View FragmentView;
 
         @Nullable
         @Override
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.my_workouts, container, false); // we are instantiating the myView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
+            FragmentView = inflater.inflate(R.layout.my_workouts, container, false); // we are instantiating the FragmentView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
 
-            final Button chestButton =(Button)myView.findViewById(R.id.ChestBtn);
-            final Button backButton =(Button)myView.findViewById(R.id.BackBtn);
-            final Button legsButton =(Button)myView.findViewById(R.id.LegBtn);
+            final Button chestButton =(Button)FragmentView.findViewById(R.id.ChestBtn);
+            final Button backButton =(Button)FragmentView.findViewById(R.id.BackBtn);
+            final Button legsButton =(Button)FragmentView.findViewById(R.id.LegBtn);
 
+            //CHEST Exercise Button
             chestButton.setOnClickListener(new View.OnClickListener(){
             
                 @Override
                 public void onClick(View v) {
-                    Intent ChestIntent = new Intent(getActivity(), Chest.class);
+                    Intent ChestIntent = new Intent(getActivity(), ChestExercise.class);
                     startActivity(ChestIntent);
 
                 }
             });
+
+
+            //BACK Exercise Button
+            backButton.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    Intent BackIntent = new Intent(getActivity(), BackExercise.class);
+                    startActivity(BackIntent);
+
+                }
+            });
+
+            //LEGS Exercise Button
+
+            legsButton.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    Intent LegsIntent = new Intent(getActivity(), LegsExercise.class);
+                    startActivity(LegsIntent);
+
+                }
+            });
+
+
 
          /*   backButton.setOnClickListener(){
 
@@ -46,7 +73,7 @@ public class MyWorkoutsFragment extends PreferenceFragment{
             };
 
             */
-            return myView;
+            return FragmentView;
 
     }
     }

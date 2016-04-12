@@ -1,5 +1,6 @@
 package com.emmanuel.gympact;
 
+import android.app.ActionBar;
 import android.app.ActivityManager;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -55,17 +57,11 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-      /*  //linking webview control with my webview variable
 
-        mywebView = (WebView)findViewById(R.id.myWebView);
-        WebSettings webSettings = mywebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        mywebView.loadUrl("www.google.com");
-
-        //make links open in webview by force
-        mywebView.setWebViewClient(new MyWebViewClient());
-        */
     }
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -109,18 +105,25 @@ public class MainActivity extends AppCompatActivity
 
         if(id == R.id.bmi_calc) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Bmi_calc()).commit();
+            getSupportActionBar().setTitle("My BMI");
         } else if (id == R.id.myworkouts) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
+            getSupportActionBar().setTitle("My Workouts");
         } else if (id == R.id.myprogress) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyProgressFragment()).commit();
+            getSupportActionBar().setTitle("My Progress");
         } else if (id == R.id.online) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Online()).commit();
+            getSupportActionBar().setTitle("Go Online");
         }else if (id == R.id.tips) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new TipsFragment()).commit();
+            getSupportActionBar().setTitle("Tips");
         } else if (id == R.id.settings) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new Settings()).commit();
+            getSupportActionBar().setTitle("Settings");
         } else if (id == R.id.logout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new MyWorkoutsFragment()).commit();
+            getSupportActionBar().setTitle("Log Out");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

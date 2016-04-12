@@ -21,15 +21,15 @@ import android.webkit.WebViewClient;
  */
 public class TipsFragment extends Fragment {
 
-    View myView;
+    View FragmentView;
 
     @Nullable
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.tips_fragment, container, false); // we are instantiating the myView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
+        FragmentView = inflater.inflate(R.layout.tips_fragment, container, false); // we are instantiating the FragmentView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
 
-        return myView;
+        return FragmentView;
 
     }
 

@@ -20,14 +20,16 @@ import android.widget.ProgressBar;
  */
 public class Online extends Fragment {
 
-    View myView;
+    View FragmentView;
 
     @Nullable
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.online, container, false); // we are instantiating the myView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
-        WebView webView = (WebView) myView.findViewById(R.id.myWebView);
+
+        FragmentView = inflater.inflate(R.layout.online, container, false); // we are instantiating the FragmentView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.my_workouts
+
+        WebView webView = (WebView) FragmentView.findViewById(R.id.myWebView);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         // webView.getSettings().setJavaScriptEnabled(true);
@@ -36,7 +38,7 @@ public class Online extends Fragment {
         webView.setInitialScale(180);
         webView.setWebViewClient(new myWebClient());
 
-        return myView;
+        return FragmentView;
 
     }
 

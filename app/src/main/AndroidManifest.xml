@@ -38,7 +38,9 @@
             android:name=".AboutMe"
             android:label="@string/title_activity_AboutMe"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity android:name=".ChestExercise" />
+        <activity android:name=".BackExercise" />
+        <activity android:name=".LegsExercise"></activity>
     </application>
 
 </manifest>

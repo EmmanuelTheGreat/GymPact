@@ -16,13 +16,15 @@ import android.widget.TextView;
  */
 public class Bmi_calc extends Fragment {
 
-    View myView;
+    View FragmentView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.bmi_calc, container, false); // we are instantiating the myView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.about_me
-        // return myView;
+
+        FragmentView = inflater.inflate(R.layout.bmi_calc, container, false); // we are instantiating the myView object with the method inside of the inflater object with the first parameter of the inflator.inflate method being r.layout.about_me
+
+
 
 
 
@@ -36,13 +38,13 @@ public class Bmi_calc extends Fragment {
         //setContentView(R.layout.about_me);
 
 
-        final Button BMICalc = (Button)myView.findViewById(R.id.calculatebmi);
-        final EditText bmiAge = (EditText)myView.findViewById(R.id.bmiAge);
-        final EditText field_weight = (EditText)myView.findViewById(R.id.field_weight);
-        final EditText field_height = (EditText)myView.findViewById(R.id.field_height);
-        final TextView view_result = (TextView)myView.findViewById(R.id.view_result);
+        final Button BMICalc = (Button)FragmentView.findViewById(R.id.calculatebmi);
+        final EditText bmiAge = (EditText)FragmentView.findViewById(R.id.bmiAge);
+        final EditText field_weight = (EditText)FragmentView.findViewById(R.id.field_weight);
+        final EditText field_height = (EditText)FragmentView.findViewById(R.id.field_height);
+        final TextView view_result = (TextView)FragmentView.findViewById(R.id.view_result);
         final TextView view_msg = (TextView)
-                myView.findViewById(R.id.view_msg);
+                FragmentView.findViewById(R.id.view_msg);
 
      //   Intent intent = getActivity().getIntent();
 
@@ -90,7 +92,7 @@ public class Bmi_calc extends Fragment {
 
             }
         });
-        return myView;
+        return FragmentView;
     }
 
 }
