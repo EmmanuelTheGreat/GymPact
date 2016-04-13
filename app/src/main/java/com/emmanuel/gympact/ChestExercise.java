@@ -30,6 +30,7 @@ public class ChestExercise extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chest_exercise);
+        getSupportActionBar().setTitle("Chest");
 
         myDatabase = new DatabaseHelper(this);
 

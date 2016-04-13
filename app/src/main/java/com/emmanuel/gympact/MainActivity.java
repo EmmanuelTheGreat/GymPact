@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
 
 
+
         if(id == R.id.bmi_calc) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Bmi_calc()).commit();
             getSupportActionBar().setTitle("My BMI");

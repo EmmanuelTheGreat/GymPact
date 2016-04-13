@@ -9,12 +9,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.emmanuel.gympact.AboutMe">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </FrameLayout>
 
 </RelativeLayout>

@@ -5,10 +5,10 @@
         <item
             android:id="@+id/userArea"
             android:icon="@drawable/ic_person_black_48dp"
-            android:title="User Area" />
+            android:title="About Me" />
         <item
             android:id="@+id/bmi_calc"
-            android:icon="@drawable/ic_person_black_48dp"
+            android:icon="@drawable/ic_favorite_black_48dp"
             android:title="My BMI" />
         <item
             android:id="@+id/myworkouts"
@@ -20,7 +20,7 @@
             android:title="My Progress" />
         <item
             android:id="@+id/online"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_search_black_48dp"
             android:title="Online" />
         <item
             android:id="@+id/tips"

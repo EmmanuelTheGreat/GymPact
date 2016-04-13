@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by user on 07/04/2016.
@@ -65,12 +66,12 @@ public class Bmi_calc extends Fragment {
                 weight = Double.parseDouble(field_weight.getText().toString());
                 height = Double.parseDouble(field_height.getText().toString());
 
-                //    if(field_height.getText().toString().equals("")|| field_weight.getText().toString().equals("")){
+                 //   if(field_height.getText().toString().equals("")|| field_weight.getText().toString().equals("")){
 
-                //   Toast.makeText(getContext(), "No valid values" , Toast.LENGTH_LONG);
+                  // Toast.makeText(getContext(), "No valid values", Toast.LENGTH_LONG);
 
-                //  Toast.makeText(getApplicationContext(), "No valid values" , Toast.LENGTH_LONG);
-                // }
+                 // Toast.makeText(getApplicationContext(), "No valid values" , Toast.LENGTH_LONG);
+              //   }
 
                 bmi = height*height;
                 bmi = weight/ bmi;

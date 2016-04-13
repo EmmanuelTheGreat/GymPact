@@ -74,28 +74,30 @@
                 android:singleLine="true"
                 android:textColor="@color/input_login"
                 android:textColorHint="@color/input_login_hint"
-                android:background="@color/white"/>
+                android:background="@drawable/login_textfields"
+                android:elevation="10dp"/>
 
 
             <TextView android:layout_width="wrap_content"
                 android:text="Password"
                 android:layout_height="wrap_content"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                />
 
             <EditText
                 android:hapticFeedbackEnabled="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/etPassword"
-        android:hint="Password"
-        android:layout_marginBottom="15dp"
-        android:background="@color/white"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/input_login"
-        />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/login_textfields"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:elevation="10dp"/>
 
     <Button
         android:hapticFeedbackEnabled="true"
@@ -103,7 +105,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/bLogin"
-        android:elevation="6dp"
+        android:elevation="10dp"
         android:layout_marginTop="20dip"
         android:background="@drawable/loginbutton"
         android:textColor="#ffffff"/>

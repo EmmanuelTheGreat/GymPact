@@ -26,6 +26,7 @@ public class LegsExercise extends AppCompatActivity{
 protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_legs_exercise);
+        getSupportActionBar().setTitle("Legs");
 
         myDatabase = new DatabaseHelperLegs(this);
 

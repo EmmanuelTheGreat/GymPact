@@ -56,18 +56,6 @@
                 android:layout_marginBottom="93dp" />
         <!-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Username"
-            android:layout_marginTop="20dp"
-            android:id="@+id/textView2"
-
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff" />
-
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/navButton"
             android:layout_width="wrap_content"
@@ -91,12 +79,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Username"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView2"
+
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Age"
             android:id="@+id/textView3"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="55dp"
 
-            android:layout_gravity="center"
+            android:layout_gravity="right|center_vertical"
             android:textColor="#ffffff" />
 
         <EditText
@@ -106,7 +106,7 @@
             android:id="@+id/etAge"
             android:textAppearance="?android:attr/textAppearanceLarge"
 
-            android:layout_gravity="center"
+            android:layout_gravity="right|center_vertical"
             android:textColor="@color/colorPrimaryDark" />
 
         <EditText
@@ -116,7 +116,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left|bottom"
             android:textColor="@color/colorPrimaryDark" />
 
 

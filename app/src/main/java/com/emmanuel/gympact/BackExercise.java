@@ -27,6 +27,7 @@ public class BackExercise extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_back_exercise);
+        getSupportActionBar().setTitle("Back");
 
         myDatabase = new DatabaseHelperBack(this);
 
