@@ -66,6 +66,22 @@ public class Bmi_calc extends Fragment {
                 weight = Double.parseDouble(field_weight.getText().toString());
                 height = Double.parseDouble(field_height.getText().toString());
 
+
+                final boolean[] cancel = {false};
+                final View[] focusView = {null};
+
+                if(bmiAge.getText().toString().equals("")) {
+
+                    // final boolean[] cancel = {false};
+                    //final View[] focusView = {null};
+
+                    bmiAge.setError("You must fill in this field");
+                    focusView[0] = bmiAge;
+                    cancel[0] = true;
+
+                   // Toast.makeText(getContext(this), "Enter exercise",Toast.LENGTH_SHORT).show();
+
+                }
                  //   if(field_height.getText().toString().equals("")|| field_weight.getText().toString().equals("")){
 
                   // Toast.makeText(getContext(), "No valid values", Toast.LENGTH_LONG);

@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,10 @@ public class RegisterActivity extends AppCompatActivity {
         final Button bRegister =(Button)findViewById(R.id.bRegister);
         final TextView loginLink = (TextView)findViewById(R.id.tvLogin);
 
+
+        final String ageLength = etAge.getText().toString().trim();
+
+
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +55,9 @@ public class RegisterActivity extends AppCompatActivity {
                 final String password = etPassword.getText().toString();
                 final int age = Integer.parseInt(etAge.getText().toString());
 
+                final boolean[] cancel = {false};
+                final View[] focusView = {null};
+
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
 
 
@@ -60,18 +68,40 @@ public class RegisterActivity extends AppCompatActivity {
 
                             boolean success = jsonResponse.getBoolean("success");
 
-                            if(etPassword.length() < 5){
+                            if(etName.length() < 1){
 
-                                Toast.makeText(RegisterActivity.this, "Password is required to be atleast 5 characters",
+                                etName.setError("Name required");
+                                focusView[0] = etName;
+                                cancel[0] = true;
+
+
+                                Toast.makeText(RegisterActivity.this, "Please enter your name",
                                         Toast.LENGTH_SHORT).show();
-                            }else if(etName.length() < 1) {
-                                Toast.makeText(RegisterActivity.this, "Please fill in your name",
+
+                            }else if(etUsername.length() < 1) {
+
+                                etUsername.setError("Username required");
+                                focusView[0] = etUsername;
+                                cancel[0] = true;
+
+                                Toast.makeText(RegisterActivity.this, "Please enter your username",
                                         Toast.LENGTH_SHORT).show();
-                            }    else if(etUsername.length() < 1){
-                                    Toast.makeText(RegisterActivity.this, "Please fill in your username",
+
+                            }    else if(etPassword.length() < 5){
+
+                                etPassword.setError("Minimum of 5 characters required");
+                                focusView[0] = etPassword;
+                                cancel[0] = true;
+
+                                    Toast.makeText(RegisterActivity.this, "Password is required to be at least 5 characters",
                                             Toast.LENGTH_SHORT).show();
-                            }else if(etAge.getText().toString().length() < 1){
-                                Toast.makeText(RegisterActivity.this, "Please fill in your age",
+                            }else if(etAge.getText().toString().trim().length() < 0/*(ageLength.length() == 0 || ageLength.equals(""))*/){
+
+                                etAge.setError("Age required");
+                                focusView[0] = etAge;
+                                cancel[0] = true;
+
+                                Toast.makeText(RegisterActivity.this, "Please enter your age",
                                         Toast.LENGTH_SHORT).show();
                             }else if(success){
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

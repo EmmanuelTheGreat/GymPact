@@ -55,11 +55,51 @@ public class BackExercise extends AppCompatActivity{
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isDataInserted =  myDatabase.insertData(exercise.getText().toString(),
+                boolean isDataInserted =  myDatabase.insertData(
+                        exercise.getText().toString(),
                         weight.getText().toString(),
                         reps.getText().toString());
 
-                if(isDataInserted == true)
+                final boolean[] cancel = {false};
+                final View[] focusView = {null};
+
+                 if(exercise.length() < 1) {
+
+                    // final boolean[] cancel = {false};
+                     //final View[] focusView = {null};
+
+                     exercise.setError("You must fill in this field");
+                     focusView[0] = exercise;
+                     cancel[0] = true;
+
+                     Toast.makeText(BackExercise.this, "Enter exercise",
+                             Toast.LENGTH_SHORT).show();
+
+                 } else if (weight.length() < 1) {
+
+                     // final boolean[] cancel = {false};
+                     //final View[] focusView = {null};
+
+                     weight.setError("You must fill in this field");
+                     focusView[0] = weight;
+                     cancel[0] = true;
+
+                     Toast.makeText(BackExercise.this, "Enter weight",
+                             Toast.LENGTH_SHORT).show();
+
+                 } else if (reps.length() < 1) {
+
+                     // final boolean[] cancel = {false};
+                     //final View[] focusView = {null};
+
+                     reps.setError("You must fill in this field");
+                     focusView[0] = reps;
+                     cancel[0] = true;
+
+                     Toast.makeText(BackExercise.this, "Enter number of repetitions",
+                             Toast.LENGTH_SHORT).show();
+
+                 }else if(isDataInserted == true)
                     Toast.makeText(BackExercise.this, "Data saved successfully", Toast.LENGTH_LONG).show();
 
                 else

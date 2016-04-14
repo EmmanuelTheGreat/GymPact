@@ -42,7 +42,7 @@
             android:layout_below="@+id/header">
 
         <TextView android:layout_width="wrap_content"
-            android:text="Name"
+            android:text="Name:"
             android:layout_height="wrap_content"
             android:textColor="#3d7dec" />
 
@@ -63,7 +63,7 @@
         android:elevation="10dp"/>
 
         <TextView android:layout_width="wrap_content"
-            android:text="Username"
+            android:text="Username:"
             android:layout_height="wrap_content"
             android:textColor="#3d7dec" />
 
@@ -84,7 +84,7 @@
 
 
         <TextView android:layout_width="wrap_content"
-            android:text="Password"
+            android:text="Password:"
             android:layout_height="wrap_content"
             android:textColor="#3d7dec" />
 
@@ -105,7 +105,7 @@
 
 
         <TextView android:layout_width="wrap_content"
-            android:text="Age"
+            android:text="Age:"
             android:layout_height="wrap_content"
             android:textColor="#3d7dec" />
     <EditText

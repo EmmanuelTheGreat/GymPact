@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -45,6 +46,9 @@ public class LoginActivity extends AppCompatActivity {
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
 
+                final boolean[] cancel = {false};
+                final View[] focusView = {null};
+
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -53,7 +57,25 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
 
-                            if(success){
+                            if(etUsername.length() < 1) {
+
+                                etUsername.setError("Username required");
+                                focusView[0] = etUsername;
+                                cancel[0] = true;
+
+                                Toast.makeText(LoginActivity.this, "Please enter your username",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }else if(etPassword.length() < 1) {
+
+                                etPassword.setError("Password required");
+                                focusView[0] = etPassword;
+                                cancel[0] = true;
+
+                                Toast.makeText(LoginActivity.this, "Please enter your password",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }else if(success){
                                 String name = jsonResponse.getString("name");
                                 int age = jsonResponse.getInt("age");
 
