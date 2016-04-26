@@ -132,22 +132,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 /*
-   private class MyWebViewClient extends WebViewClient{
 
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if(Uri.parse(url).getHost().equals("www.google.com")){
-
-                //open contents of url into webview
-            return false;
-        }
-        else{
-        //open all external links in other app or browser
-
-        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
-        startActivity(intent);
-        return true;
-    }
-    }
 } */
 }
